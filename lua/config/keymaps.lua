@@ -6,9 +6,9 @@ local keymap = vim.keymap
 
 -- Moving through windows
 keymap.set("n", "<S-Left>", "<C-w>h", { desc = "Go to Left Window" })
-keymap.set("n", "<S-Right>", "<C-w>l", { desc = "Go to Left Window" })
-keymap.set("n", "<S-Up>", "<C-w>l", { desc = "Go to Left Window" })
-keymap.set("n", "<S-Down>", "<C-w>l", { desc = "Go to Left Window" })
+keymap.set("n", "<S-Right>", "<C-w>l", { desc = "Go to Right Window" })
+keymap.set("n", "<S-Up>", "<C-w>k", { desc = "Go to Upper Window" })
+keymap.set("n", "<S-Down>", "<C-w>j", { desc = "Go to Lower Window" })
 
 -- Moving through buffers (tabs)
 keymap.set("n", "<C-Left>", "<cmd>bprevious<CR>", { desc = "Go to Previous buffer/tab" })
