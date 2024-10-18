@@ -12,11 +12,11 @@ return {
     end,
   },
 
-  -- Configure LazyVim to load gruvbox
+  -- Configure LazyVim to load catppuccin
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin-mocha",
+      colorscheme = "gruvbox-flat",
     },
   },
 }
