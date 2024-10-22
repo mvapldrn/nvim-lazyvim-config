@@ -30,5 +30,7 @@ opt.linebreak = false
 opt.shiftwidth = 4
 opt.tabstop = 4
 
-
-
+vim.g.c_space_errors = 1
+vim.g.c_min_lines = 100
+vim.g.c_syntax_for_h = 1
+vim.g.c_no_comment_fold = 1

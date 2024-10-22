@@ -1,22 +1,67 @@
 return {
-  -- add gruvbox
-  {
-    "eddyekofo94/gruvbox-flat.nvim",
+    -- add gruvbox
+    {
+        --"eddyekofo94/gruvbox-flat.nvim",
+        "scottmckendry/cyberdream.nvim",
 
-    enabled = true,
+        enabled = true,
 
-    config = function()
-      vim.g.gruvbox_flat_style = "dark"
-      vim.g.gruvbox_italic_comments = true
-      vim.g.gruvbox_transparent = true
-    end,
-  },
+        opts = {
+            -- Enable transparent background
+            transparent = false,
 
-  -- Configure LazyVim to load catppuccin
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "gruvbox-flat",
+            -- Enable italics comments
+            italic_comments = true,
+
+            -- Replace all fillchars with ' '
+            hide_fillchars = false,
+
+            theme = {
+                variant = "default",
+                saturation = 0.8,
+                highlights = {
+                    -- Highlight groups to override, adding new groups is also possible
+                    -- See `:h highlight-groups` for a list of highlight groups or run `:hi` to see all groups and their current values
+                    -- Comment = {fg = "#FFFF00", bg = "NONE", italic = true }
+                },
+
+                -- Override a highlight group entirely using the color palette
+                overrides = function(colors) -- NOTE: This function nullifies the `highlights` option
+                    -- Example:
+                    return {
+                        Comment = { fg = colors.yellow, bg = "NONE", italic = true },
+                        ["@property"] = { fg = colors.white, bold = false },
+                    }
+                end,
+
+                -- Override a color entirely
+                colors = {
+                    -- For a list of colors see `lua/cyberdream/colours.lua`
+                    -- Example:
+                    bg = "#303030",
+                    bgAlt = "#1E2124",
+                    bgHighlight = "#3C4048",
+                    fg = "#FFFFFF",
+                    grey = "#7B8496",
+                    blue = "#5EA1FF",
+                    green = "#5EFF6C",
+                    cyan = "#5EF1FF",
+                    red = "#FF6E5E",
+                    yellow = "#F0F040",
+                    magenta = "#FF5EF1",
+                    pink = "#FF5EA0",
+                    orange = "#FFBD5E",
+                    purple = "#BD5EFF",
+                },
+            }
+        }
     },
-  },
+
+    -- Configure LazyVim to load cyberdream
+    {
+        "LazyVim/LazyVim",
+        opts = {
+          colorscheme = "cyberdream",
+        },
+    },
 }
