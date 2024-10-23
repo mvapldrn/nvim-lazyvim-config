@@ -30,9 +30,24 @@ return {
                     -- Example:
                     return {
                         Comment = { fg = colors.yellow, bg = "NONE", italic = true },
+                        Type = { fg = colors.white, bg = "NONE", italic = true },
+                        Function = { fg = colors.white, bg = "NONE", bold = true },
+                        Operator = { fg = colors.white, bg = "NONE" },
+                        Constant = { fg = colors.green, bg = "NONE", bold = true },
+                        Macro = { link = "Constant" },
+                        ErrorMsg = { fg = colors.white, bg = colors.red, bold = true },
+                        WindowBackground = { bg = colors.bgAlt },
+                        NotifyBackground = { link = "WindowBackground" },
+                        BufferLineBackground = { link = "WindowBackground" },
+                        NormalFloat = { fg=colors.yellow, bg = colors.bgAlt },
+                        FloatTitle = { fg=colors.orange, bg = colors.bgAlt, bold = true },
+                        FloatBorder = { fg=colors.orange, bg = colors.bgAlt },
+                        FlashBackdrop = { fg=colors.bgAlt },
+
+                        ["@type.builtin"] = { link = "Type" },
                         ["@property"] = { fg = colors.white, bold = false },
                     }
-                end,
+                end,     
 
                 -- Override a color entirely
                 colors = {
@@ -47,7 +62,7 @@ return {
                     green = "#5EFF6C",
                     cyan = "#5EF1FF",
                     red = "#FF6E5E",
-                    yellow = "#F0F040",
+                    yellow = "#FFFF40",
                     magenta = "#FF5EF1",
                     pink = "#FF5EA0",
                     orange = "#FFBD5E",
