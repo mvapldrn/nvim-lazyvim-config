@@ -7,8 +7,33 @@ return {
                 options = {
                     transparent = false,
                     dim_inactive = false,
+                    colorblind = {
+                        enable = true,
+                        severity = {
+                            protan = 0.8,
+                            deutan = 0.3,
+                            tritan = 0.3,
+                        },
+                    },
                     styles = {
                         comments = "italic",
+                        strings = "italic",
+                    },
+                    inverse = {
+                        visual = true,
+                        search = true,
+                    }
+                },
+                palettes = {
+                    nightfox = {
+                        whitespace = "#262626",
+                        yellow = "#FFFF00",
+                    }
+                },
+                groups = {
+                    nightfox = {
+                        Whitespace = { bg = "palette.whitespace" },
+                        Comment = { fg = "palette.yellow" },
                     }
                 }
             })
@@ -19,8 +44,8 @@ return {
     {
         "LazyVim/LazyVim",
         opts = {
-          --colorscheme = "nightfox",
-          colorscheme = "dayfox",
+          colorscheme = "nightfox",
+          --colorscheme = "dayfox",
           --colorscheme = "dawnfox",
           --colorscheme = "duskfox",
           --colorscheme = "nordfox",
