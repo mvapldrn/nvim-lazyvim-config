@@ -27,7 +27,7 @@ return {
                 palettes = {
                     nightfox = {
                         whitespace = "#262626",
-                        yellow = "#FFFF00",
+                        yellow = "#F0F025",
                     }
                 },
                 groups = {

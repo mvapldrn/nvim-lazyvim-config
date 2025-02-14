@@ -31,10 +31,10 @@ keymap.del("n", "<S-h>")
 keymap.del("n", "<S-l>")
 
 -- Different resize of windows
-keymap.set("n", "<A-Right>", "<cmd>vertical resize +2<CR>", { desc = "Increase window width" })
-keymap.set("n", "<A-Left>",  "<cmd>vertical resize -2<CR>", { desc = "Decrease window width" })
-keymap.set("n", "<A-Up>",    "<cmd>resize +2<CR>", { desc = "Increase window height" })
-keymap.set("n", "<A-Down>",  "<cmd>resize -2<CR>", { desc = "Decrease window height" })
+keymap.set("n", "<C-S-Right>", "<cmd>vertical resize +2<CR>", { desc = "Increase window width" })
+keymap.set("n", "<C-S-Left>",  "<cmd>vertical resize -2<CR>", { desc = "Decrease window width" })
+keymap.set("n", "<C-S-Up>",    "<cmd>resize +2<CR>", { desc = "Increase window height" })
+keymap.set("n", "<C-S-Down>",  "<cmd>resize -2<CR>", { desc = "Decrease window height" })
 
 keymap.del("n", "<leader>-")
 keymap.del("n", "<leader>|")
